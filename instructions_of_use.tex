@@ -2,12 +2,13 @@
 \usepackage{hyperref}
 \usepackage[english]{babel}
 \begin{document}
-	\section{General Instructions} \\
-	\subsection{How to start} \\
-	To start using this template, you can:
+	\section{General Instructions} 
+	\subsection{How to start} 
+	There are two options for using this template:
 	\begin{enumerate}
 		\item Use it in your browser with \href{https://www.overleaf.com/}{Overleaf}
 			\begin{itemize}
+				\item[] \textit{WARNING: Overleaf will require an internet connection - not good for working, e.g., in the train!}
 				\item Download this project as a .zip folder.
 				\item Load the .zip folder in Overleaf
 				\item Adapt, change it, write, and compile it in any .tex file of your project (Crtl + S)
@@ -15,9 +16,11 @@
 		\item Use it with your own Tex Editor. We recommend TexStudio.
 			\begin{itemize}
 				\item Download TexStudio \href{https://www.texstudio.org/}{TexStudio}
-				\item Install the necessary packages, which are: babel, microtype, parskip, fourier, fancyhdr, hyperref, apacite, geometry, graphicx, caption, amsmath, gensymb, enumitem. 
-				\item Obs: If you try to compile main.tex you'll receive a message suggesting to install the packages already.
-				\item Of course you can delete some of these packages if you'll not use them, as well as add more if you need.
+				\item On Windows: Get \href{https://miktex.org/howto/install-miktex}{MikTex} - install for local user - DO NOT USE ADMIN ACCOUNT!
+				\item On Linux: Use \href{https://en.wikipedia.org/wiki/TeX_Live}{TexLive}
+				\item On macOS: Either use \href{https://miktex.org/howto/install-miktex}{MikTex} or \href{https://en.wikipedia.org/wiki/TeX_Live}{TexLive} (both work potentially, however, we could not test the installation on macOS)
+				\item In MikTex Console / TexLive: Enable "On-the-fly" installation of packages
+				\item Compile main.tex with PDFLaTex (do not use LaTex or LuaLaTex compilers)
 			\end{itemize} 
 	\end{enumerate}
 
