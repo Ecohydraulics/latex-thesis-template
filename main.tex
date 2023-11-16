@@ -1,60 +1,33 @@
-%======================================================================
-% LaTeX template for MSc. and BSc. Thesis for the Department of Hydraulic Engineering and Water Resources Management (University of Stuttgart)
-% Latest release: v1.0.1 (October 2021)
+% LaTeX template for MSc. and BSc. theses at the Department of Hydraulic Engineering and Water Resources Management (University of Stuttgart)
+% Latest release: v2.0.0 (November 2023)
+% Original Author: Beatriz Negreiros
+% Contributors: Sebastian Schwindt
+% Change log:
+%	v2.0.0: - moved preamble to style file and enriched package loadings
+%			- linked bib-file to hydro-informatics on zotero
+%			- added tiks image example from Lisa's thesis in the introduction
+
 
 % DISCLAIMER
-% To the best of the Author's knowledge, this template satisfies the current University of Stuttgart thesis requirements.
-% However, it is your responsibility to assure that you have met all requirements of the University and your particular department.
-% Also note that there are explanatory comments and tips throughout this template.
-%======================================================================
+% While this template complies with basic style requirements, it is the thesis author's responsibility to assure that all requirements are in complieance with the school, department/institute and/or degree program.
 
 \documentclass[11pt,twoside]{report}	
 
-%===============================BEGINNING OF PREAMBEL=======================================
-% Document Formatting
-\usepackage[english]{babel}
-\usepackage{microtype}
-\usepackage{parskip}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-% Alternative to arial:
-% \usepackage{fourier}
-\usepackage{fancyhdr}
-
-% Referencing
-%\usepackage{fancyref}
-\usepackage{hyperref}
-\usepackage{apacite}
-
-% Formatting Preamble
-\usepackage[top=2.5cm, bottom=2.5cm, left=3.8cm, right=2.5cm]{geometry}
-
-% Graphics Preamble
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
-\usepackage[font={small}, hang]{caption}
-
-% Mathematics Preamble
-\usepackage{amsmath}
-\newcommand{\R}{\mathbb{R}}
-
-% Other
-\usepackage{gensymb}  %inserts degree 
-\usepackage[inline, shortlabels]{enumitem} % letter type of listing (a)..(b)..
+% PREAMBEL
+% to add packages or make modifications to package usage, use the thesis-hymo.sty style file
+\usepackage{thesis-hymo}
 
 % Document
-\title{\textbf{Name of the Thesis}} % enter the titlename of your thesis here
-\author{Student name} % enter your name
+\title{\textbf{Thesis Title}} % enter the titlename of your thesis here
+\author{Student Name} % enter your name
 
 % Macros - here you can define macros for shortening the writing of large words, for instance:
 \def\rmse{Root Mean Squared Error}
 \def\std{Standard Deviation}
 
 
-%===============================END OF PREAMBEL=======================================
 
-
-%============================BEGIN OF DOCUMENT ==========================================
+% BEGINNING OF THE DOCUMENT
 \begin{document}
 
 \input{titlepage}
@@ -119,7 +92,7 @@ Abstracts should not be more than one page. A thesis written in Germany requires
 \renewcommand{\headrulewidth}{1.0pt}
 
 \bibliographystyle{apacite}
-\bibliography{references}
+\bibliography{hydro-informatics}
 
 
 % The \appendix statement indicates the beginning of the appendices.
