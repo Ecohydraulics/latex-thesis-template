@@ -1,0 +1,167 @@
+\typeout{}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{thesis}[Custom report style by Sebastian Schwindt (2024) for Bachelor and Master theses]
+\typeout{}
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\ProcessOptions\relax
+
+\LoadClass{report}
+
+% Document Formatting
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[german,english]{babel}
+\RequirePackage{microtype}
+\RequirePackage{parskip}
+\renewcommand{\familydefault}{\sfdefault}
+% Alternative to arial font:
+% \RequirePackage{fourier}
+\RequirePackage{fancyhdr}
+
+% Referencing
+%\RequirePackage{fancyref}
+% autorefs
+\RequirePackage{hyperref}
+\def\namedlabel#1#2{\begingroup
+	#2%
+	\def\@currentlabel{#2}%
+	\phantomsection\label{#1}\endgroup
+}
+\RequirePackage{apacite}
+
+% Formatting Preamble
+\RequirePackage{helvet}
+\RequirePackage[a4paper,top=22mm,bottom=25mm,inner=30.mm,outer=25mm]{geometry}
+\setlength{\topmargin}{-2.2mm} % = 0mm -1in + 23.2mm 
+\setlength{\textheight}{231.9mm} % = 297mm -29.5mm -31.6mm - 14mm (12 to accomodate footline with pagenumber)
+\setlength{\headheight}{26pt}
+\setlength{\parindent}{0pt}
+
+% Graphics Preamble
+\RequirePackage{graphicx}
+\graphicspath{ {./images/} }
+\RequirePackage[font={small}, hang]{caption}
+
+% colors
+\RequirePackage{xcolor}
+\RequirePackage{colortbl} % add for color in tables
+\definecolor{anthrazit}{RGB}{62,68,76}
+\definecolor{unisblue}{RGB}{0,81,158}
+\definecolor{iwsblue}{RGB}{0,190,255}
+
+% Mathematics Preamble
+% amssymb package provides various useful mathematical symbols
+\RequirePackage{amssymb}
+% amsthm package provides extended theorem environments
+\RequirePackage{amsthm}
+% amsmath enables aligned equations
+\RequirePackage{amsmath}
+\RequirePackage{gensymb}  % degree symbols
+% more symbology:
+\RequirePackage{mathtools} % e.g. for \ventcolon
+
+% lists
+\RequirePackage[inline, shortlabels]{enumitem} % letter type of listing (a)..(b)..
+
+% packages for longtable with graphics
+\RequirePackage{graphicx}
+\RequirePackage{tabularray}
+\RequirePackage{longtable} % for notations
+% add table column types - requires array package
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+
+% enable vector drawings in figures
+\RequirePackage{tikz}
+\usetikzlibrary{3d,angles,arrows,arrows.meta,calc,intersections,overlay-beamer-styles,positioning,shadows.blur,shapes.arrows,shapes.geometric,shapes.symbols,shapes,snakes}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usepgfplotslibrary{fillbetween}
+\pgfdeclarelayer{bg}
+\pgfsetlayers{bg,main}
+\RequirePackage{varwidth}
+
+\setlength\parindent{20pt}
+\setlength\parskip{0pt}
+
+\pgfplotscreateplotcyclelist{mylist}{
+	cyan!60!black\\
+	orange\\
+	green!70!black\\
+}
+\pgfplotscreateplotcyclelist{mylistdatapoints}{
+	orange, densely dashed\\
+	red, densely dashed\\
+	green!70!black, densely dashed\\
+	brown!60!black, densely dashed\\
+	lime!80!black, densely dashed\\
+	blue\\
+	orange\\
+	red\\
+	green!70!black\\
+	brown!60!black\\
+	lime!80!black\\
+}
+\pgfplotscreateplotcyclelist{mylistdashed}{
+	cyan!60!black, densely dashed\\
+	orange, densely dashed\\
+	green!70!black, densely dashed\\
+}
+\pgfplotscreateplotcyclelist{mylistmixed}{
+	cyan!60!black\\
+	orange\\
+	green!70!black,\\
+	cyan!60!black, densely dashed\\
+	orange,densely dashed\\
+	green!70!black,densely dashed\\
+}
+
+% some more rendering for infoboxes
+\RequirePackage{tcolorbox}
+\RequirePackage{amsfonts}
+
+% HYPOTHESIS TEMPLATE
+% usage: 
+% \myHypothesis{text}
+\newcommand{\myHypothesis}[1]{
+	\begin{tcolorbox}[colbacktitle=unisblue!35!black, colback=iwsblue!5!white, fonttitle=\bfseries, standard jigsaw,colframe=white!20!black, bottom=10mm, middle=10mm, top=10mm, boxsep=10mm, opacityframe=0.5, opacityfill=0.7, opacitybacktitle=0.95, title filled, title= Research question \& hypotheses, size=fbox]
+		\vspace{2mm}	
+		#1
+		\vspace{1mm}
+	\end{tcolorbox}
+}
+% INFOBOX TEMPLATE
+% usage: 
+% \infobox{title}{infoboxtext}
+\newcommand{\infobox}[2]{
+	\begin{tcolorbox}[colbacktitle=orange!85!black, colback=orange!5!white, fonttitle=\bfseries, standard jigsaw,colframe=orange!70!black, bottom=10mm, middle=10mm, top=10mm, boxsep=10mm, opacityframe=0.5, opacityfill=0.7, opacitybacktitle=0.95, title filled, title= #1, size=fbox]
+		\vspace{2mm}	
+		#2
+		\vspace{1mm}
+	\end{tcolorbox}
+}
+% DEFBOX DEFINITION BOX TEMPLATE
+% \defbox{title}{deftext}
+\newcommand{\defbox}[2]{
+	\begin{tcolorbox}[colbacktitle=iwsblue!35!black, colback=iwsblue!5!white, fonttitle=\bfseries, standard jigsaw,colframe=unisblue, bottom=10mm, middle=10mm, top=10mm, boxsep=10mm, opacityframe=0.5, opacityfill=0.7, opacitybacktitle=0.95, title filled, title=\textcolor{white}{ Definition: #1}, size=fbox]
+		\vspace{2mm}	
+		#2
+		\vspace{1mm}
+	\end{tcolorbox}
+}
+
+% custom commands
+\newcommand{\thesisURL}[2]%
+{%
+	\textcolor{iwsblue}{%
+		\href{#2}{\color{iwsblue}{#1}}%
+	}%
+}
+
+\newcommand{\R}{\mathbb{R}}
+
+\endinput
+

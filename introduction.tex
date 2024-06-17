@@ -5,11 +5,14 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+Welcome!
+
+This template is provided at \thesisURL{https://github.com/Ecohydraulics/latex-thesis-template}{https://github.com/Ecohydraulics/latex-thesis-template}.
 
 \section{Background}
 \label{subsec:background}
 
-Example reference to \autoref{fig:neural_network}, which is based on \cite{kim2017neural}.
+Example reference to \autoref{fig:neural-network}, which is based on \cite{kim2017neural}. If you need to introduce abbreviations like Operating System (OS), or parameters like the dimensionless bed load transport~$\Phi$, make sure to also define them at the beginning in \texttt{notations.tex}.
 
 \begin{figure}[!h]
 	\centering 
@@ -110,16 +113,27 @@ Example reference to \autoref{fig:neural_network}, which is based on \cite{kim20
 		\end{footnotesize}
 	\end{tikzpicture}
 	\caption[Structure of a neural network]{Structure of a neural network.}
-	\label{fig:neural_network}
+	\label{fig:neural-network}
 \end{figure}
 
-\section{Something Location}
-\label{subsec:somelocation}
 
-write here
+\section{Motivation}
+\label{sec:motivation}
 
-See more in~\autoref{subsec:background}
-write here
+Delineate the research gap (max. 2 pages).
+
+\section{Research question}
+\label{sec:rq}
+
+Based on the research gap defined in \autoref{sec:motivation}, define the hypothesis here:
+
+\myHypothesis{
+	What is needed because of the research gap (no Yes-or-No question)?
 	
-\begin{center}
-\end{center}
+	My test hypotheses are:
+	\begin{itemize}
+		\item[(i)] A specific aspect that can be boolean (True-or-False), which I test for answering the research question.
+		\item[(ii)] Another specific aspect that can be boolean (True-or-False), which I test for answering the research question.
+	\end{itemize}
+
+}

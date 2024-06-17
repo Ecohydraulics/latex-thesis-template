@@ -1,0 +1,103 @@
+% LaTeX template for MSc. and BSc. theses at the Department of Hydraulic Engineering and Water Resources Management (University of Stuttgart)
+% Latest release: v3.0.0 (June 2024)
+% Original Author: Beatriz Negreiros
+% Contributors: Sebastian Schwindt
+% Change log:
+%	v3.0.0: - replaced style file with a class file
+
+% DISCLAIMER
+% While this template complies with basic style requirements, it is the thesis author's responsibility to assure that all requirements are in complieance with the school, department/institute and/or degree program.
+
+\documentclass[11pt,twoside]{thesis}	
+
+% Document
+\title{\textbf{Thesis Title}} % enter the titlename of your thesis here
+\author{Student Name} % enter your name
+
+% Macros - here you can define macros for shortening the writing of large words, for instance:
+\def\rmse{Root Mean Squared Error}
+\def\std{Standard Deviation}
+
+
+
+% BEGINNING OF THE DOCUMENT
+\begin{document}
+
+\input{titlepage}
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\pagenumbering{roman}
+
+\chapter*{Declaration}
+{
+	Example of declaration:
+	I declare that I have developed and written the enclosed thesis completely by myself and that I have not used sources or means without declaration in the text. Any thoughts from others or literal quotations are clearly marked. The thesis was not used in the same or in a similar version to achieve an academic grading or is being published elsewhere. The enclosed electronic version is identical to the printed versions.\\
+	
+	I agree that the present work is made available for scientific purposes in the libraries of the Institute for Water and Environmental Systems, University of Stuttgart (published according § 6 Abs. 1 UrhG (Copyright Act) and thereof can be cited under § 51 of the UrhG (Copyright Act).
+}
+
+\chapter*{Acknowledgments}
+{
+add your Acknowledgments
+}
+
+\chapter*{Abstract}
+{
+Abstracts should not be more than one page. A thesis written in Germany requires an additional English abstract. 
+}
+
+% List of contents, figures and tables
+\tableofcontents
+\clearpage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\addcontentsline{toc}{chapter}{Notation}
+\include{notation}
+
+% Beginning of chapters
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\leftmark}}
+\fancyhead[RE,LO]{\nouppercase{\rightmark}}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{1.0pt}
+
+\input{introduction}
+\cleardoublepage
+
+\input{state-of-art}
+
+\input{methods}	
+
+\input{results}
+
+\input{discussion}
+
+\input{conclusions}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\rightmark}}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{1.0pt}
+
+\bibliographystyle{apacite}
+\bibliography{hydro-informatics}
+
+
+% The \appendix statement indicates the beginning of the appendices.
+\appendix
+% Add an un-numbered title page before the appendices and a line in the Table of Contents
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{Appendices}
+% Appendices are just more chapters, with different labeling (letters instead of numbers).
+\input{appendix}
+
+\end{document}

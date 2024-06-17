@@ -1,34 +1,46 @@
 \chapter{State-of-the-Art}
 %\chapter{Theoretische Grundlagen}
-\label{ch:stateart}
-
+\label{ch:soa}
 
 % This chapter can be also called Literature Review
 
+Check what others have done, which is relevant to your research question and to provide evidence for testing the hypotheses defined in \autoref{sec:rq}.
 
-\section{Previous Works}
+For coherence: note that chapter titles should be \textit{Camel Cased}, while everything else is \textit{Sentence cased}.
+
+\section{Previous works}
 \label{sec:prevworks}
 	
 % For referring to sections or chapter you rpesented before:
-As explained in section~\ref{sec:notlogic}
+As explained in \citeA{negreiros2024database}.
 	
 	
-\section{Types of Something}
+\section{Types of something}
 \label{sec:typesome}
 
+Do \citeA{kundu2008fluid} talk about Lagrangian and Eulerian concepts visualized in \autoref{fig:example}?
+
+\begin{figure}[htp]
+	\begin{center}
+		\begin{minipage}{\textwidth}
+			\centering
+			\resizebox*{.9\textwidth}{!}{\includegraphics{example}}
+			\caption[An example figure.]{An example figure that visually tries to integrate Lagrangian and Eulerian concepts.}
+			\label{fig:example}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
 		
-\subsection{somethingsomething}
+\subsection{A subsection}
 \label{subsec:somesome}
 		
-As the Table~\ref{tb:typesomething} shows.
+As the \autoref{tab:typesomething} shows, this text has to introduce the thing before the table lists the use of the thing.
 		
-\subsection{somethingnothing}
-\label{subsec:somenoth}
 		
-\begin{table}[]
+\begin{table}[hb] % try [h]ere, then [b]ottom to make sure the table is mentioned in the text before it is shown
 	\centering
-	\label{tb:typesomething} % A good practice for labeling your objects in a .tex environment is to use acronyms for different things. For tables, use "tb:"
-	\caption{Captions of tables should be positioned on the top, while figure captions should be in the bottom}
+	\caption{Captions of tables should be positioned above the table, while figure captions should be in the bottom}
 	\begin{tabular}{ll}
 		\hline
 		\textbf{Thing} & \textbf{Use} \\
@@ -38,24 +50,33 @@ As the Table~\ref{tb:typesomething} shows.
 		something & something \\
 		\hline
 	\end{tabular}
-	\end{table}
+	% the label goes below the tabular env
+	\label{tab:typesomething}
+\end{table}
 		
-\section{Something Statistics}
+\subsection{No subsection goes alone}
+\label{subsec:somenoth}
+
+And it should also have some text.
+
+
+\section{Something statistics}
 \label{sec:somestatistics}
 	
-As shown in Equation~\ref{eq:happiness}
+As shown in \autoref{eq:happiness}
 \begin{equation}\label{eq:happiness}
 	happiness=\frac{EmptyCup+coffee}{EmptyCups}
 \end{equation}	
 	
+\section{A section header}
+\label{sec:some-ref}
 	
-\section{Nothing Logic}
-\label{sec:notlogic}
-	
-\subsection{The Logic Underlying Something}
+\subsection{The logic underlying something}
 \label{subsec:logicunderlying}
     	
-    	
+\defbox{The thing}{
+	This is the definition of the thing.
+}
     	
 \subsection{Concepts and terminology}
 \label{subsec:conceptsterm}	
@@ -67,9 +88,11 @@ Understanding the semantics of something
 \section{Something or nothing?}
 \label{sec:someornot}
 
-\subsubsection*{Some non-sense?}
+\subsubsection*{Unnumbered non-sense header?}
 
-    	
-    	
+\infobox{The note}{
+	Do you really need to do so much numbering?
+}
+   	
     	
     
