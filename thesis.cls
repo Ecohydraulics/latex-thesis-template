@@ -153,7 +153,71 @@
 	\end{tcolorbox}
 }
 
-% custom commands
+% CODE BLOCK TEMPLATES
+
+\RequirePackage{listings}
+\lstset{language=[LaTeX]Tex,tabsize=4, basicstyle=\scriptsize\ttfamily, showstringspaces=false, numbers=left, numberstyle=\tiny, numbersep=10pt, breaklines=true, breakautoindent=true, breakindent=10pt}
+\lstset{
+    breaklines=true,
+    breakatwhitespace=true,
+    language=Python,
+    frame=none,
+    framerule=0.0pt,
+    rulecolor=\color{gray},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{red!50!blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red!90!white},
+    numbers=left,
+    numberstyle=\tiny\color{black!50!white},
+    stepnumber=1,
+    frame=single,
+    breaklines=false,
+    showspaces=false,
+    showstringspaces=false,
+    tabsize=4,
+    backgroundcolor=\color{black!18!white}, % Light gray background
+    captionpos=b,                        % Caption position (bottom)
+}
+
+% \codeblock{code}
+\newcommand{\codeblock}[1]{
+	\begin{lstlisting}
+	#1
+	\end{lstlisting}
+}
+
+% \inlinecode{code}
+\newcommand{\inlinecode}[1]{\raggedright
+	\colorbox{black!18!white}{\lstinline{#1}}
+}
+
+% TERMINAL ENVIRONMENT - USAGE: 
+% \begin{terminal}
+% code
+% \end{terminal}
+
+\newenvironment{terminal}%
+   {\par\noindent\adjustbox{margin=1ex,bgcolor=black!20!white,margin=0ex \medskipamount}\bgroup\minipage\linewidth\verbatim}%
+   {\endverbatim\endminipage\egroup}
+
+\RequirePackage{fancyvrb}
+\RequirePackage{fvextra}
+\RequirePackage{adjustbox}
+
+% Define a custom Verbatim environment called Terminal
+\DefineVerbatimEnvironment{terminal}{Verbatim}{
+  fontsize=\small,
+  formatcom=\color{unisblue!50!black},
+  frame=single,
+  framerule=0.0pt,
+  framesep=5pt,
+  commandchars=\\\{\},
+  codes={\catcode`\$=2},
+}
+
+
+% OTHER CUSTOM COMMANS
 \newcommand{\thesisURL}[2]%
 {%
 	\textcolor{iwsblue}{%
