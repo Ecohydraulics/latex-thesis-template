@@ -6,7 +6,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
 
-\LoadClass{report}
+\LoadClass[openright]{report}
 
 % Document Formatting
 \RequirePackage[T1]{fontenc}
@@ -187,10 +187,13 @@
 	\end{lstlisting}
 }
 
-% \inlinecode{code}
-\newcommand{\inlinecode}[1]{\raggedright
-	\colorbox{black!18!white}{\lstinline{#1}}
+%\inlinepy{python-code} and \inlinecode{code}
+\newcommand{\inlinepy}[1]{{\raggedright
+	\lstinline[breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},keywordstyle=\sffamily\color{red!50!blue},language=Python,backgroundcolor=lightBook!25!white]{#1}}\justifying
 }
+
+\def\inlinecode{\lstinline[breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},basicstyle=\ttfamily,keywordstyle=\sffamily\color{red!50!blue},language=Python,backgroundcolor=lightBook!25!white]}
+
 
 % TERMINAL ENVIRONMENT - USAGE: 
 % \begin{terminal}
