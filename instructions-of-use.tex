@@ -19,7 +19,7 @@
 				\item On Linux: Use \href{https://en.wikipedia.org/wiki/TeX_Live}{TexLive}\\ $\rightarrow$~Install all packages with \texttt{sudo apt install texlive-full}
 				\item On macOS: Either use \href{https://miktex.org/howto/install-miktex}{MikTex} or \href{https://en.wikipedia.org/wiki/TeX_Live}{TexLive} (both work potentially, however, we could not test the installation on macOS)
 				\item Cross-platform editor: Download and install \href{https://www.texstudio.org/}{TexStudio} (or similar software)
-				\item Compile main.tex with PDFLaTex (do not use LaTex or LuaLaTex compilers)
+				\item Compile main.tex with PDFLaTex (do not use LaTex or LuaLaTex compilers) in the following order: \texttt{pdflatex myThesis.tex} $>$ \texttt{bibtex myThesis.aux} $>$ \texttt{pdflatex myThesis.tex} $>$ \texttt{pdflatex myThesis.tex}. This ensures that the bibfile is correctly converted to a \texttt{.bbl} file, and used in the pdf output. Note that TexStudio does this procedure automatically.
 			\end{itemize} 
 	\end{enumerate}
 
