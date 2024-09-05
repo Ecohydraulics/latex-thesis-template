@@ -39,7 +39,7 @@ Figures should be stored in the `images` subfolder. Note that images with many d
 
 ### Bibtex References
 
-We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library). This library, located in *hydro-informatics.bib*, will occasionally be updated in this repository.
+We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library). This library, located in `hydro-informatics.bib`, will occasionally be updated in this repository.
 
 In Zotero, bibrefs can be created using the Better Bibtex Addon ([see their docs](https://retorque.re/zotero-better-bibtex/)). The plugin can be installed within Zotero. For citation keys, we recommend to use the following preferences in the Better BibTex preferences (Zotero > Edit > Settings > Better BibTex > Citation keys box):
 
