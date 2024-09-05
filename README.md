@@ -3,7 +3,7 @@
 This repository contains LaTex templates for writing a Bachelor's or Master's thesis in the corporate design format of the University of Stuttgart. 
 
 
-### Usage
+### Installation and Requirements
 
 Overleaf users: Download this Github repo as zip file and upload the whole folder as a new project in Overleaf
 
@@ -22,6 +22,8 @@ To edit the source files locally on Windows use the following software:
 
 TexStudio will use Miktex to compile a pdf file of the tex files.
 
+### Usage
+
 To compile the template, open `myThesis.txss2` in TexStudio and press `F5`. If you get compilation errors related to missing packages, the reason is probably a wrong setup of Miktex (e.g., installed as admin, or no on-the-fly package installation enabled). Note that `myThesis.txss2` points to `myThesis.tex`, the root document of the thesis template, which includes the other TEX files (`introduction.tex`, `state-of-the-art.tex`, `methods.tex`, `results.tex`, `discussion.tex`, and `conclusions.tex`). We recommend to not modify this root structure and only work in the `introduction.tex`, `state-of-the-art.tex`, `methods.tex`, `results.tex`, `discussion.tex`, and `conclusions.tex` files.
 
 > Note: This template uses a customized class called `thesis.cls`, which provides the `thesis` class. The `thesis` class inherits from the native `report` class. Feel free to extend this class file by your specific needs, for instance, by defining new commands or adding other packages (`\RequirePackage{<pkg-name>}`).
@@ -37,9 +39,9 @@ Figures should be stored in the `images` subfolder. Note that images with many d
 
 ### Bibtex References
 
-We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library). This library is occasionally updated in this repository, contained in *hydro-informatics.bib*.
+We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library). This library, located in *hydro-informatics.bib*, will occasionally be updated in this repository.
 
-In Zotero, bibrefs can be created using the Better Bibtex Addon ([see their docs](https://retorque.re/zotero-better-bibtex/)). The plugin can be installed within zotero. For citation keys, we recommend to use the following preferences in the Better BibTex preferences (Zotero > Edit > Settings > Better BibTex > Citation keys box):
+In Zotero, bibrefs can be created using the Better Bibtex Addon ([see their docs](https://retorque.re/zotero-better-bibtex/)). The plugin can be installed within Zotero. For citation keys, we recommend to use the following preferences in the Better BibTex preferences (Zotero > Edit > Settings > Better BibTex > Citation keys box):
 
 ```
 auth.lower + year + shorttitle(1,1).lower
