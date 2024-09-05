@@ -1,5 +1,7 @@
 ## Bachelor's and Master's Thesis Template
+
 This repository contains LaTex templates for writing a Bachelor's or Master's thesis in the corporate design format of the University of Stuttgart. 
+
 
 ### Usage
 
@@ -33,12 +35,11 @@ An example for a table is provided in `state-of-the-art.tex`.
 Figures should be stored in the `images` subfolder. Note that images with many different pixels should be in JPG format. Graphs with a lot of white background should be stored in PNG format, with an alpha-layer for white. For image manipulation, we recommend [Gimp](https://www.gimp.org).
 
 
-
 ### Bibtex References
 
-We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: https://www.zotero.org/groups/4917569/hydro-informatics/library
+We recommend working with a citation/reference manager. For the domain of hydraulic engineering, you may want to work with our hydro-informatics.com zotero library: [https://www.zotero.org/groups/4917569/hydro-informatics/library](https://www.zotero.org/groups/4917569/hydro-informatics/library). This library is occasionally updated in this repository, contained in *hydro-informatics.bib*.
 
-In Zotero, bibrefs can be created using the Better Bibtex Addon ([see their docs](https://retorque.re/zotero-better-bibtex/)). The plugin can be installed within zotero. For citation keys, we recommend to use the following preferences in the Better BibTex preferences (Zotero > Tools > Better BibTex > Open Better BibTex preferences... > citation keys):
+In Zotero, bibrefs can be created using the Better Bibtex Addon ([see their docs](https://retorque.re/zotero-better-bibtex/)). The plugin can be installed within zotero. For citation keys, we recommend to use the following preferences in the Better BibTex preferences (Zotero > Edit > Settings > Better BibTex > Citation keys box):
 
 ```
 auth.lower + year + shorttitle(1,1).lower
@@ -50,8 +51,6 @@ auth.lower + year + shorttitle(1,1).lower
 * By using this template one is not exempted from checking for mistakes or adapting other preferences. Please use spell-checkers!
 * The owner of this repository does not hold legal responsibility for its implementation. However, improvements and constructive feedback is very welcome. :)
 * Check the license and disclaimer for more information.
-
-
 
 
 ## DISCLAIMER
