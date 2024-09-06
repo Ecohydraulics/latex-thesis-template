@@ -1,12 +1,14 @@
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis}[Custom report style by Sebastian Schwindt (2024) for Bachelor and Master theses]
+\ProvidesClass{thesis}[Customized report style by Sebastian Schwindt (2024) for Bachelor, Master, and PhD theses]
 \typeout{}
 
+% use report class with the fleqn option to left-align equations
+\DeclareOption{fleqn}{\PassOptionsToClass{fleqn}{report}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
 
-\LoadClass[openright]{report}
+\LoadClass[openright,fleqn]{report}
 
 % Document Formatting
 \RequirePackage[T1]{fontenc}
@@ -55,11 +57,15 @@
 \RequirePackage{amssymb}
 % amsthm package provides extended theorem environments
 \RequirePackage{amsthm}
-% amsmath enables aligned equations
-\RequirePackage{amsmath}
+% amsmath enables aligned equations - load with left-aligned option
+\RequirePackage[fleqn]{amsmath}
 \RequirePackage{gensymb}  % degree symbols
 % more symbology:
 \RequirePackage{mathtools} % e.g. for \ventcolon
+% enforce zero-indent left-alignment of equations
+\AtBeginDocument{
+    \setlength{\mathindent}{0pt}
+}
 
 % lists
 \RequirePackage[inline, shortlabels]{enumitem} % letter type of listing (a)..(b)..
