@@ -194,11 +194,20 @@
 }
 
 %\inlinepy{python-code} and \inlinecode{code}
-\newcommand{\inlinepy}[1]{{\raggedright
-	\lstinline[breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},keywordstyle=\sffamily\color{red!50!blue},language=Python,backgroundcolor=lightBook!25!white]{#1}}\justifying
+\newcommand{\inlinepy}[1]{%
+  \lstinline[%
+    breaklines=true,%
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},%
+    keywordstyle=\sffamily\color{red!50!blue},%
+    language=Python,%
+    backgroundcolor=lightBook!25!white%
+  ]|#1|%
 }
 
-\def\inlinecode{\lstinline[breaklines=true,postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},basicstyle=\ttfamily,keywordstyle=\sffamily\color{red!50!blue},language=Python,backgroundcolor=lightBook!25!white]}
+% For shell commands
+\newcommand{\inlinecode}[1]{\texttt{\detokenize{#1}}}
+% For LaTeX commands (or environments)
+\newcommand{\inlinecommand}[1]{\texttt{\detokenize{#1}}}
 
 
 % TERMINAL ENVIRONMENT - USAGE: 
