@@ -10,60 +10,60 @@
         "FileVersion": 1,
         "Files": [
             {
-                "Col": 40,
+                "Col": 0,
                 "EditorGroup": 0,
                 "FileName": "myThesis.tex",
-                "FirstLine": 36,
-                "FoldedLines": "",
-                "Line": 59
-            },
-            {
-                "Col": 25,
-                "EditorGroup": 0,
-                "FileName": "introduction.tex",
-                "FirstLine": 3,
+                "FirstLine": 12,
                 "FoldedLines": "",
                 "Line": 19
             },
             {
-                "Col": 0,
+                "Col": 52,
                 "EditorGroup": 0,
-                "FileName": "state-of-art.tex",
-                "FirstLine": 0,
+                "FileName": "introduction.tex",
+                "FirstLine": 128,
                 "FoldedLines": "",
-                "Line": 9
+                "Line": 131
             },
             {
-                "Col": 66,
+                "Col": 5,
+                "EditorGroup": 0,
+                "FileName": "state-of-art.tex",
+                "FirstLine": 85,
+                "FoldedLines": "",
+                "Line": 90
+            },
+            {
+                "Col": 198,
                 "EditorGroup": 0,
                 "FileName": "methods.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 5
+                "Line": 21
             },
             {
-                "Col": 0,
+                "Col": 45,
                 "EditorGroup": 0,
                 "FileName": "results.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 3
+                "Line": 6
             },
             {
-                "Col": 0,
+                "Col": 1,
                 "EditorGroup": 0,
                 "FileName": "discussion.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 15
+                "Line": 17
             },
             {
-                "Col": 100,
+                "Col": 149,
                 "EditorGroup": 0,
                 "FileName": "conclusions.tex",
                 "FirstLine": 0,
                 "FoldedLines": "",
-                "Line": 4
+                "Line": 11
             },
             {
                 "Col": 0,
@@ -74,12 +74,12 @@
                 "Line": 4
             },
             {
-                "Col": 0,
+                "Col": 60,
                 "EditorGroup": 0,
                 "FileName": "notation.tex",
-                "FirstLine": 0,
+                "FirstLine": 1,
                 "FoldedLines": "",
-                "Line": 20
+                "Line": 6
             }
         ],
         "MasterFile": "",

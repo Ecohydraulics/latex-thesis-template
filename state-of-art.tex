@@ -11,9 +11,9 @@ For coherence: note that chapter titles should be \textit{Camel Cased}, while ev
 \section{Previous works}
 \label{sec:prevworks}
 	
-% For referring to sections or chapter you rpesented before:
-As explained in \citeA{negreiros2024database}.
-	
+% For referencs in author-year style, use:
+As explained in \citeA{negreiros2024database}. This statement can also be supported by multiple sources \cite{schwindt2019lifespan, schwindt2023bayesian, schwindt2023bedload, scolari2025hydromorphodynamic}.
+
 	
 \section{Types of something and image manipulation}
 \label{sec:typesome}
@@ -94,7 +94,7 @@ As shown in \autoref{eq:happiness}
 		
 \subsubsection*{Something set rules} 
 
-Understanding the semantics of something
+Do not use \inlinecode{\subsubsection} levels. If needed, use  \inlinecode{\subsubsection*} instead. This makes a difference in the table of contents.
 
 \section{Something or nothing?}
 \label{sec:someornot}
@@ -105,5 +105,13 @@ Understanding the semantics of something
 	Do you really need to do so much numbering?
 }
    	
-    	
+\section{Equations}
+
+Momentum conservation is described by the Navier-Stokes equation  (\autoref{eq:ns}):
+
+\begin{equation} \label{eq:ns}
+	\rho~\left[\frac{\partial \mathbf{u}}{\partial t} + \left(\mathbf{u} \cdot \nabla\right) \mathbf{u}\right] = -\nabla p + \rho \nu \nabla^2\mathbf{u} + \rho \mathbf{g} 
+\end{equation}
+
+where $t$ is time, $\mathbf{u}$ is flow velocity, $\rho$ is fluid density, $p$ is pressure, $\nu$ is kinematic viscosity, and $\mathbf{g}$ is gravitational acceleration. The viscous force term $\nu \nabla^2 \mathbf{u}$ is not part of the original Euler equations, which describe inviscid flow where viscosity is negligible. However, the simulation of fluid dynamics includes turbulence where viscosity, while often small compared to inertia and pressure forces, plays a critical role in conveying and dissipating kinetic energy \cite{macdonald2007metallurgical,kundu2008fluid}. 
     
